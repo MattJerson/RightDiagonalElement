@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class Figueroa_Enabling {
+public static void main(String[] args) {
+int X, I, J, Sum=0;   
+Scanner DE=new Scanner(System.in);   
+System.out.print("Enter Value For n: ");
+X = DE.nextInt();
+int Array[][] = new int[X][X];   
+System.out.print("Enter Elements For Array: "); 
+for (I = 0; I < X; I++)    
+for (J = 0; J < X; J++)   
+Array[I][J] = DE.nextInt();
+System.out.println("The Array:");   
+for (I = 0; I < X; I++)   
+{   
+for (J = 0; J < X; J++) 
+System.out.print(Array[I][J] + " ");
+System.out.println(); 
+} 
+for(I=0;I<X;I++)
+{ 
+for(J=0;J<X;J++)
+{
+if((I + J) == (X - 1))
+{
+Sum += Array[I][J];
+}
+} 
+}
+System.out.println("Sum of Right Elements: "+Sum) ;
+}    
+}
